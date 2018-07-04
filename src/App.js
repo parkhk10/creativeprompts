@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import cactus from './logo.png';
 import './App.css';
 import StackGrid, { transitions, easings } from "react-stack-grid";
 
@@ -19,7 +20,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <img src={cactus} className="App-logo" alt="logo" />
           <h1 className="App-title">Succulents</h1>
         </header>
         <p className="App-intro">
