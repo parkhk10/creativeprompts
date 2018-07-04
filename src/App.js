@@ -7,15 +7,14 @@ import Grid from './components/grid'
 import Center from 'react-center';
 
 class App extends Component {
-  //exampleComponents = [1, 2, 3, 4, 5]
+  exampleComponents = [1, 2, 3, 4, 5]
 
   render() {
-    // var exampleComponents = this.exampleComponents.map(function(exampleNum) {
-    //   return <ExampleComponent useThisToPassDataBetweenComponentsExample={exampleNum}/>
-    // })
-    // var grid = this.function(){
-    //   return <Grid/>
-    // }s
+
+    var exampleComponents = this.exampleComponents.map(function(exampleNum) {
+    return <ExampleComponent useThisToPassDataBetweenComponentsExample={exampleNum} key={exampleNum}/>
+  })
+
     return (
       <div className="App">
         <header className="App-header">
@@ -25,6 +24,7 @@ class App extends Component {
         <p className="App-intro">
           Welcome to Creative Prompts! Post your own response to the prompt above or find some inspiration from others{"\'"} posts.
         </p>
+        {exampleComponents}
         <Grid/>
       </div>
     );

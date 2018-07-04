@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import StackGrid, { transitions, easings } from "react-stack-grid";
-import succulent from "/Users/Allison/Desktop/creativeprompts/src/img/succulent.jpeg"
+import succulent from "../img/succulent.jpeg"
 
 //StackGrid is an open-source library to make grids (https://tsuyoshiwada.github.io/react-stack-grid/#/)
 
