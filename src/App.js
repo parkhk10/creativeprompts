@@ -9,7 +9,7 @@ class App extends Component {
 
   render() {
     var exampleComponents = this.exampleComponents.map(function(exampleNum) {
-      return <ExampleComponent useThisToPassDataBetweenComponentsExample={exampleNum}/>
+      return <ExampleComponent useThisToPassDataBetweenComponentsExample={exampleNum} key={exampleNum}/>
     })
     return (
       <div className="App">
