@@ -1,3 +1,4 @@
 export default {
-	countExample: 0
+	countExample: 0,
+	posts: []
 };
