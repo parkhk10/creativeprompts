@@ -10,12 +10,13 @@ import './App.css';
 import GridPostContainer from './components/gridpost-container';
 
 class App extends Component {
-
+//TODO: later- change the time into a module that automatically updates
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <img src={cactus} className="App-logo" alt="logo" />
+          <h1 className="date">[Sunday] July 8, 2018</h1>
           <h1 className="App-title">Succulents</h1>
         </header>
         <p className="App-intro">
