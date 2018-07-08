@@ -41,12 +41,12 @@ export class SampleDataService {
 		// 	posts.push(new Post(title1, author1, contentText1, null));
 		// 	posts.push(new Post(title2, author2, null, contentImg2));
 		// }
-		posts.push(new Post(title4, author4, null, contentImg4));
-		posts.push(new Post(title1, author1, contentText1, null));
-		posts.push(new Post(title, author, contentText, null));
-		posts.push(new Post(title2, author2, contentText2, contentImg2));
-		posts.push(new Post(title3, author3, contentText3, contentImg3));
-		posts.push(new Post(title5, author5, contentText5, null));
+		posts.push(new Post(title4, author4, null, contentImg4, new Date()));
+		posts.push(new Post(title1, author1, contentText1, null, new Date()));
+		posts.push(new Post(title, author, contentText, null, new Date()));
+		posts.push(new Post(title2, author2, contentText2, contentImg2, new Date()));
+		posts.push(new Post(title3, author3, contentText3, contentImg3, new Date()));
+		posts.push(new Post(title5, author5, contentText5, null, new Date()));
 
 
 		return posts;

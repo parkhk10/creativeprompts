@@ -3,18 +3,20 @@
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
 
 .App-header {
   background-color: #222;
-  height: 225px;
   padding: 20px;
   color: white;
 }
 
 .App-title {
+  margin-top: 10%;
+}
+
+.App-title h1 {
   font-size: 3em;
   font-family: 'Merriweather', serif;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -44,6 +46,12 @@
   letter-spacing: .07em;
   font-size: 1.5em;
 }
+.time {
+  font-family: 'Merriweather', serif;
+  letter-spacing: .07em;
+  font-size: 1em;
+}
+
 
 .App-intro {
   font-size: large;
