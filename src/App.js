@@ -1,34 +1,26 @@
 import React, { Component } from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
+import { withRouter } from "react-router-dom";
+
 import * as postActions from './actions/postActions';
 
-import cactus from './logo.png';
 import './App.css';
 
 import GridPostContainer from './components/gridpost-container';
-import ClockComponent from './components/clock-component';
-import PromptComponent from './components/prompt-component';
+import HeaderComponent from './components/header-component';
+import MainContainer from './components/main-container';
+
 
 class App extends Component {
 //TODO: later- change the time into a module that automatically updates
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={cactus} className="App-logo" alt="logo" />
-          <br />
-          <br />
-          <ClockComponent />
-
-          <PromptComponent />
-          <p className="App-intro">
-            Welcome to Creative Prompts! Post your own response to the prompt above or find some inspiration from others{"'"} posts.
-          </p>
-        </header>
+        <HeaderComponent />
         <br />
         <br />
-        <GridPostContainer posts={this.props.postStore} key={1}/>
+        <MainContainer />
       </div>
     );
   }
@@ -46,7 +38,9 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App);
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(App)
+);

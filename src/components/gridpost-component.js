@@ -3,6 +3,7 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import * as postActions from '../actions/postActions';
 import * as actionTypes from '../actions/actionTypes';
+import { withRouter } from "react-router-dom";
 
 class GridPostComponent extends Component {
 
@@ -34,7 +35,9 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(GridPostComponent);
+export default withRouter(
+	connect(
+	  mapStateToProps,
+	  mapDispatchToProps
+	)(GridPostComponent)
+);

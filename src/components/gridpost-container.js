@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
+import { withRouter } from "react-router-dom";
 import * as postActions from '../actions/postActions';
 import StackGrid, { transitions, easings } from "react-stack-grid";
 
@@ -22,7 +23,7 @@ class GridPostContainer extends Component {
 	render() {
 		// TODO: get rid of i as key lol, but make sure key is unique
 		var i = 0;
-    var gridPosts = this.props.posts.map(function(post) {
+    var gridPosts = this.props.postStore.map(function(post) {
     	i++;
   		return <GridPostComponent post={post} key={i}/>
   	})
@@ -60,7 +61,9 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(GridPostContainer);
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(GridPostContainer)
+);
