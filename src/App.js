@@ -8,6 +8,7 @@ import './App.css';
 
 import GridPostContainer from './components/gridpost-container';
 import ClockComponent from './components/clock-component';
+import PromptComponent from './components/prompt-component';
 
 class App extends Component {
 //TODO: later- change the time into a module that automatically updates
@@ -20,10 +21,7 @@ class App extends Component {
           <br />
           <ClockComponent />
 
-          <div className="App-title">
-          <h1>
-          Succulents</h1>
-          </div>
+          <PromptComponent />
           <p className="App-intro">
             Welcome to Creative Prompts! Post your own response to the prompt above or find some inspiration from others{"'"} posts.
           </p>
