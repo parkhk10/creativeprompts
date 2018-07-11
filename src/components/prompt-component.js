@@ -33,6 +33,7 @@ class PromptComponent extends Component {
   render() {
     return (
       <div className="App-title">
+        <h3>prompt of the day:</h3>
         <h1>{this.state.title}</h1>
       </div>
     );

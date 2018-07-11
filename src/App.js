@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import { withRouter } from "react-router-dom";
@@ -13,14 +14,29 @@ import MainContainer from './components/main-container';
 
 
 class App extends Component {
-//TODO: later- change the time into a module that automatically updates
+
+  componentDidUpdate() {
+    //This handles smooth scrolling!
+    let hash = this.props.location.hash.replace('#', '');
+    if (hash) {
+        let node = ReactDOM.findDOMNode(this.refs[hash]);
+        if (node) {
+            node.scrollIntoView({behavior: "smooth", block: "start"});
+        }
+    }
+}
+
   render() {
     return (
       <div className="App">
+        <div ref='header'>
         <HeaderComponent />
+        </div>
         <br />
         <br />
+        <div ref='main'>
         <MainContainer />
+        </div>
       </div>
     );
   }
