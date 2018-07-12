@@ -5,9 +5,7 @@ import { withRouter } from "react-router-dom";
 import * as postActions from '../actions/postActions';
 import StackGrid, { transitions, easings } from "react-stack-grid";
 
-import ExampleComponent from './example-component';
 import GridPostComponent from './gridpost-component';
-import Center from 'react-center';
 
 const { scaleDown } = transitions;
 
@@ -17,7 +15,7 @@ class GridPostContainer extends Component {
 	}
 
 	componentWillMount() {
-    this.props.postActions.getPosts();
+    this.props.postActions.getPostsFromDB();
   }
 
 	render() {
@@ -26,12 +24,13 @@ class GridPostContainer extends Component {
     var gridPosts = this.props.postStore.map(function(post) {
     	i++;
   		return <GridPostComponent post={post} key={i}/>
-  	})
+      
+    })
 
     return (
     	<div className="postContainer">
     		<StackGrid
-          columnWidth={350}
+          columnWidth={375}
           gutterWidth={35}
           gutterHeight={35}
           duration={1000}
