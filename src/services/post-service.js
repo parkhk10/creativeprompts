@@ -2,7 +2,6 @@ import { Post } from '../models/post';
 
 import firebaseReference from "../firebaseConfig"
 import 'firebase/firestore'
-import * as firebase from 'firebase'
 
 export class PostsService {
 	constructor(numPosts) {

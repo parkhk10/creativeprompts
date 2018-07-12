@@ -2,7 +2,6 @@ import initialState from './initialState';
 import { SampleDataService } from '../services/sampledata-service';
 import { PostsService } from '../services/post-service';
 import { GET_POSTS, SAVE_POST, GET_EXAMPLE_POSTS } from '../actions/actionTypes'
-import { Post } from '../models/post'
 
 export default function postReducer(state = initialState.posts, action) {
 	// TODO: change this to posts service
