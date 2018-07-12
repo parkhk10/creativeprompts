@@ -4,8 +4,7 @@ import firebaseReference from "../firebaseConfig"
 import 'firebase/firestore';
 
 export class DataService {
-	constructor(numPosts) {
-		this.numPosts = numPosts
+	constructor() {
     }
     
 
@@ -13,7 +12,7 @@ export class DataService {
 
         var posts = [];
 
-        var data = firebaseReference.collection('days').get()
+        var data = firebaseReference.collection('posts').get()
         .then(snapshot => {
             snapshot.forEach(doc => {
               posts.push(

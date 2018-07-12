@@ -16,3 +16,4 @@ const config = {
 
   var firebaseReference = firebase.initializeApp(config).firestore();
   export default firebaseReference;
+  

@@ -7,11 +7,11 @@ import { Post } from '../models/post'
 export default function postReducer(state = initialState.posts, action) {
 	// TODO: change this to posts service
 	var sampleDataService = new SampleDataService(9);
-	var dataService = new DataService(9);
+	var dataService = new DataService();
 	switch(action.type) {
 		case GET_POSTS:
-		var postsFromDB = dataService.getPostsFromDB()
-		return postsFromDB
+			var postsFromDB = dataService.getPostsFromDB()
+			return postsFromDB
 		case SAVE_POST:
 			return state;
 		case GET_EXAMPLE_POSTS:
