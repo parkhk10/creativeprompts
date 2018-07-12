@@ -17,7 +17,7 @@ class GridPostContainer extends Component {
 	}
 
 	componentWillMount() {
-    this.props.postActions.getPosts();
+    this.props.postActions.getPostsFromDB();
   }
 
 	render() {
