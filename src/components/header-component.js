@@ -21,8 +21,8 @@ class HeaderComponent extends Component {
         <ClockComponent />
 				<br />
 				<p className="App-intro">
-						welcome to creative prompts. feel free to post your own response to the prompt or just browse thru others’ posts.
-					</p>
+					welcome to creative prompts. feel free to post your own response to the prompt or just browse thru others’ posts.
+				</p>
 
         <PromptComponent />
 
