@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
-
-var promptList = ["flower", "hot chocolate", "drawing", "fireman", "lord of the rings", "sound of music", "mila kunis", "ducks", "cleanliness", "mother's day", "scenery", "park hyo shin", "lights", "hairstyles", "baseball", "paintbrush", "anime", "food", "kyrie irving",
-"flat earth", "facebook", "being rich", "imagination", "sailing", "horoscope", "school", "piano", "Christmas presents", "monopoly", "kirby", "blue", "computer science", "maintenance", "eiffel tower", "kyoto nights", "golden state" ]
+import {DataService} from '../services/data-service';
 
 class PromptComponent extends Component {
 
   state = {
-    title: "succulents"
+    title: new DataService().getPromptsFromDB(this),
   };
-
 
   componentDidMount() {
     var now = new Date();
@@ -24,9 +21,10 @@ class PromptComponent extends Component {
   }
 
   tick() {
-    this.setState({
-      title: promptList.pop()
-    });
+    //TODO: delete current from DB on tick() and set state to new.
+    var dataService = new DataService();
+    dataService.updatePromptsFromDB(this, this.state.title); //delete the old title from the DB
+
   }
 
 
