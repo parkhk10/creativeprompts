@@ -7,3 +7,7 @@ export function getPosts() {
 export function getPostsFromDB() {
 	return {type: types.GET_POSTS}
 }
+
+export function createPost(post) {
+	return {type: types.CREATE_POST, payload: post}
+}

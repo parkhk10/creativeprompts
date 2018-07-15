@@ -8,10 +8,10 @@ class MainContainer extends Component {
 	render() {
 		return (
 			<main>
-		    <Switch>
-		      <Route exact path='/' component={GridPostContainer}/>
-		      <Route path='/createpost' component={CreatePostComponent}/>
-		    </Switch>
+				<Switch>
+					<Route exact path='/' component={GridPostContainer}/>
+					<Route path='/createpost' component={CreatePostComponent}/>
+				</Switch>
 			</main>
 		)
 	}
