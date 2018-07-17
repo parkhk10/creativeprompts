@@ -21,12 +21,10 @@ class PromptComponent extends Component {
   }
 
   tick() {
-    //TODO: delete current from DB on tick() and set state to new.
     var dataService = new DataService();
-    dataService.updatePromptsFromDB(this, this.state.title); //delete the old title from the DB
-
+    //delete the old title from the DB and sets state to new one
+    dataService.updatePromptsFromDB(this, this.state.title); 
   }
-
 
   render() {
     return (
