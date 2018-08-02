@@ -186,3 +186,16 @@ nav .links-ul-right{
   color: #ccc;
   opacity: 0.75;
 }
+
+.far:hover{
+  color: red;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+i {
+  padding: 5px;
+}

@@ -5,6 +5,8 @@ import * as postActions from '../actions/postActions';
 import * as actionTypes from '../actions/actionTypes';
 import { withRouter } from "react-router-dom";
 
+import LikePostComponent from './likepost-component';
+
 class GridPostComponent extends Component {
 
 	render() {
@@ -17,7 +19,7 @@ class GridPostComponent extends Component {
 								style={{
 										maxWidth: "300px",
 										maxheight: "500px"}}/>
-
+				<LikePostComponent />
 			</div>
 		);
 	}
