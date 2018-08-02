@@ -12,7 +12,7 @@ class GridPostComponent extends Component {
 	render() {
 		return (
 			<div className="gridpost-component">
-				<p>{this.props.post.title}</p>
+				<p className="gridpost-title">{this.props.post.title}</p>
 				<p>{this.props.post.author}</p>
 				<p>{this.props.post.contentText}</p>
 				<img src={this.props.post.contentImage}
