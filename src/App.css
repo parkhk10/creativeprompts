@@ -186,3 +186,28 @@ nav .links-ul-right{
   color: #ccc;
   opacity: 0.75;
 }
+
+.far:hover{
+  color: red;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+i {
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.gridpost-component {
+  background-color: rgb(245, 245, 245);
+  padding: 10px;
+  border-radius: 0.5em;
+}
+
+.gridpost-title {
+  font-family: 'Merriweather', 'serif';
+  font-size: 1.5em;
+}
