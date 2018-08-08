@@ -4,11 +4,16 @@ import firebaseReference from "../firebaseConfig";
 import 'firebase/firestore';
 
 export class DataService {
-	constructor() {}
+	constructor() {
+	}
 
   getPromptsFromDB(state) {
+
+		 var todayDate = new Date(Date.now());
+		 console.log(todayDate);
+
       firebaseReference.collection('days')
-      .limit(1) //only get the first prompt from the database
+      .where("date", "==" , todayDate.toDateString().substring(4,15))
       .get()
         .then(snapshot => {
           snapshot.forEach(doc => {
@@ -32,9 +37,8 @@ export class DataService {
     });
   }
 
-  updatePromptsFromDB(state, state_title) {
-    firebaseReference.collection('days').doc(state_title).delete(); //deletes the old state
-    this.getPromptsFromDB(state); //gets the new one
+  updatePromptsFromDB(state) {
+    this.getPromptsFromDB(state); //updates state
   }
 		
 	getPostsFromDB() {
